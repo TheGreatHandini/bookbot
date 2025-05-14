@@ -11,13 +11,13 @@ def main():
     book_text = get_book_text("books/frankenstein.txt")
     word_count = get_word_number(book_text)
     sorted_dict = sort_dictionaries(count_characters(book_text))
-    print('''============ BOOKBOT ============
+    print(f"""============ BOOKBOT ============
 Analyzing book found at books/frankenstein.txt...
 ----------- Word Count ----------
 Found {word_count} total words
---------- Character Count -------''')
+--------- Character Count -------""")
     for i in sorted_dict:
-        print(i)
+        print(f'{i['char']}: {i['num']}')
     print("============= END ===============")
 
 main()
